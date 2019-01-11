@@ -1,0 +1,59 @@
+{
+  "name": "help.com-react-coding-challange",
+  "version": "0.0.1",
+  "description": "help.com react coding challange",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server",
+    "lint": "esw src/",
+    "test": "jest"
+  },
+  "author": "Help.com",
+  "license": "No license",
+  "dependencies": {
+    "@material-ui/core": "^3.8.2",
+    "chance": "^0.8.0",
+    "connect": "^3.4.1",
+    "html-webpack-plugin": "^2.28.0",
+    "lodash": "^4.17.2",
+    "prop-types": "^15.5.8",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-hot-loader": "^4.3.4",
+    "webpack": "^2.4.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.10.4",
+    "babel-eslint": "^7.1.0",
+    "babel-jest": "^19.0.0",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-transform-object-assign": "^6.22.0",
+    "babel-plugin-transform-react-jsx-source": "^6.9.0",
+    "babel-preset-env": "^1.3.1",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-1": "^6.16.0",
+    "css-loader": "^0.23.1",
+    "eslint": "^5.12.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.12.3",
+    "eslint-watch": "^4.0.2",
+    "jest": "^19.0.0",
+    "style-loader": "^0.13.0",
+    "webpack-dev-server": "^2.4.2"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "**/src/**/*.js",
+      "!**/__tests__/**"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
+    "setupFiles": [
+      "./jest-setup.js"
+    ]
+  }
+}
