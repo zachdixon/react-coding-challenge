@@ -5,7 +5,7 @@ import MessageList from './components/message-list'
 const NewApp = require('./components/message-list').default
 
 function renderApp(App) {
-  ReactDOM.render(<App />, document.querySelector('.main'))
+  ReactDOM.render(<App />, document.getElementById('root'))
 }
 
 renderApp(MessageList)

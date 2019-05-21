@@ -10,13 +10,11 @@ class MessageList extends Component {
     }
   }
 
-  componentWillMount() {
-    this.api = new Api({
-      messageCallback: (message) => {
-        this.messageCallback(message)
-      },
-    })
-  }
+  api = new Api({
+    messageCallback: (message) => {
+      this.messageCallback(message)
+    },
+  })
 
   componentDidMount() {
     this.api.start()
