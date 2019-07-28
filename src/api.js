@@ -41,7 +41,6 @@ export default function MessageGenerator({ run = false }) {
   // Accepts a priority to only remove those messages
   const removeAll = useCallback(
     priority => {
-      console.log(priority);
       if (priority) {
         if (!Object.keys(Priorities).includes(priority.toString())) {
           return console.log(
@@ -81,6 +80,7 @@ export default function MessageGenerator({ run = false }) {
 
   return {
     messages,
+    generate,
     stop,
     start,
     remove,
