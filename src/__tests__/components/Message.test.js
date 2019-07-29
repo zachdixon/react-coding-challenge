@@ -34,3 +34,30 @@ test("should remove the message after 2 seconds", async () => {
     { timeout: 2200 }
   );
 });
+
+test("should replace error message with another error message", async () => {
+  const testMessage = {
+    id: 1,
+    message: "Test",
+    priority: 1
+  };
+  const testMessage2 = {
+    id: 2,
+    message: "Test 2",
+    priority: 1
+  };
+
+  const { queryByText } = render(
+    <div>
+      <Message message={testMessage.message} priority={testMessage.priority} />
+      <Message
+        message={testMessage2.message}
+        priority={testMessage2.priority}
+      />
+    </div>
+  );
+
+  await wait(() => {
+    expect(queryByText(testMessage2.message)).toBeInTheDocument();
+  });
+});
